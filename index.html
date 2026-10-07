@@ -2365,7 +2365,8 @@ const VPOS = [[8.62, 39.18], GEO.modjo, [8.99, 40.12], [8.545, 39.262], [11.70, 
 const GFENCE = [[GEO.adama, 2000], [GEO.modjo, 1500], [GEO.kality, 500], [GEO.djibouti, 3000]];
 const PINCLS = s => ({ Moving: 'moving', Idle: 'idle', Stopped: 'stopped', Offline: 'alarm', 'In maintenance': 'stopped' }[s] || 'stopped');
 function lmap(kind, opt = {}, h = '') { return `<div class="lmap" data-kind="${kind}" data-opt='${JSON.stringify(opt)}' ${h ? `style="height:${h}"` : ''}></div>`; }
-const TILE = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+const CARTO_API_KEY = 'cb1_4cmn_1_78699171a0e00ead29b818af';
+const TILE = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?api_key=' + CARTO_API_KEY;
 const ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>';
 const PROVIDERS = [
   [TILE, { subdomains: 'abcd', attribution: ATTR }],
